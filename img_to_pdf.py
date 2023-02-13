@@ -43,7 +43,7 @@ def main():
     
     ent_text = ent1.get()
     
-    pdf_name = ent_text if ent_text else str(time.time()).split('.')[0]
+    pdf_name = ent_text if ent_text else Path(os.path.dirname(list_of_img[0])).stem
 
 
     img_conv[0].save(w_folder + f'/{pdf_name}.pdf',
